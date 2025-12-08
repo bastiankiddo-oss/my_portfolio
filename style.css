@@ -1,59 +1,54 @@
-/* ==== Modern & Bigger Typography – Bigger, Cleaner Typography ==== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-
-:root {
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Playfair Display', serif;
-  --text-color: #222;
-  --heading-color: #111;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Original style.css from https://bastiankiddo-oss.github.io/my_portfolio/ */
 
 body {
-  font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.7;
-  color: var(--text-color);
-  font-size: 18px;
-  background: #fafafa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--heading-color);
-  line-height: 1.2;
-  margin-bottom: 1rem;
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-h1 { font-size: 4.5rem; letter-spacing: -1.5px; }
-h2 { font-size: 3.2rem; }
-h3 { font-size: 2.4rem; }
-
-p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  max-width: 70ch;
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-a { color: #0066ff; text-decoration: none; font-weight: 500; }
-a:hover { text-decoration: underline; }
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
 
-button, .btn {
-  font-size: 1.1rem;
-  padding: 0.9rem 2rem;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background: white;
   border-radius: 8px;
-  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
-  h1 { font-size: 3.5rem; }
-  h2 { font-size: 2.6rem; }
-  body { font-size: 17px; }
-  p { font-size: 1.15rem; }
+h1, h2 {
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
