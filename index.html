@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sebastian Martinez - Software Engineering Student</title>
+  <title>Sebastian Martinez | Software Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-mode">
-  <!-- Dark/Light Toggle -->
-  <div class="theme-toggle">
+  
+  <div class="theme-wrapper">
     <input type="checkbox" id="theme-switch" />
     <label for="theme-switch" class="toggle-label">
       <i class="fas fa-moon"></i>
@@ -17,67 +20,83 @@
     </label>
   </div>
 
-  <!-- Hero -->
   <header class="hero">
-    <div class="container">
-      <h1>Hi, I'm <span>Sebastian Martinez</span></h1>
-      <p>Software Engineering Student | Full-Stack Developer | Building the future, one line at a time</p>
+    <div class="hero-content">
+      <p class="greeting">Hello, I'm</p>
+      <h1>Sebastian Martinez.</h1>
+      <h2>I build things for the web.</h2>
+      <p class="bio">
+        Software Engineering Student specializing in building exceptional digital experiences.
+        Currently focused on full-stack JavaScript and cloud architectures.
+      </p>
+      
+      <div class="cta-group">
+        <a href="#projects" class="btn primary-btn">Check out my work</a>
+        <a href="resume.pdf" download class="btn secondary-btn">
+          <i class="fas fa-download"></i> Resume
+        </a>
+      </div>
+
       <div class="social-links">
         <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="mailto:your.email@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
-      <a href="resume.pdf" download class="btn resume-btn">
-        <i class="fas fa-download"></i> Download Resume
-      </a>
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about" class="about container">
-    
-    <h1>About Me</h1>
-    <p>Passionate software engineering student focused on modern web development and problem-solving. 
-      Always learning, always building. Currently focused on full-stack JavaScript and cloud technologies.</p>
-    
+  <section id="skills" class="container">
+    <h2 class="section-title">My Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill-item"><i class="fab fa-react"></i> React</div>
+      <div class="skill-item"><i class="fab fa-node"></i> Node.js</div>
+      <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+      <div class="skill-item"><i class="fas fa-database"></i> MongoDB</div>
+      <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+    </div>
   </section>
 
-  <!-- Featured Project -->
-  <section id="projects" class="project container">
-    <h2>Featured Project</h2>
+  <section id="projects" class="container">
+    <h2 class="section-title">Featured Project</h2>
+    
     <div class="project-card">
-      <img src="https://_via.placeholder.com/1000x600/1e1e1e/00ff9d/?text=Project+Screenshot" alt="Project screenshot" />
-      <div class="project-info">
-        <h3>Project Name</h3>
-        <p>
-          A short, powerful description of your project. Explain the problem you solved and the impact it had. 
-          Keep it concise but impressive — recruiters love this part.
+      <div class="project-image">
+        <img src="https://via.placeholder.com/800x500/112240/00ff9d?text=Dashboard+Screenshot" alt="Project screenshot" />
+      </div>
+      <div class="project-content">
+        <span class="featured-label">Featured Project</span>
+        <h3>E-Commerce Dashboard</h3>
+        <p class="project-description">
+          A scalable dashboard for managing inventory and orders. Built with real-time data visualization, 
+          secure authentication, and a responsive UI. Solved the problem of slow load times by implementing 
+          Redis caching.
         </p>
-        <div class="tech-stack">
-          <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Tailwind</span>
-          <!-- Edit these -->
-        </div>
+        <ul class="tech-list">
+          <li>React</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>Redis</li>
+        </ul>
         <div class="project-links">
-          <a href="https://github.com/yourusername/project-repo" target="_blank">
-            <i class="fab fa-github"></i> Source Code
-          </a>
-          <a href="https://your-live-project.com" target="_blank" class="live-demo">
-            <i class="fas fa-external-link-alt"></i> Live Demo
-          </a>
+          <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+          <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact container">
-    <h2>Get In Touch</h2>
-    <p>Have a project in mind or just want to chat about code? I'm all ears!</p>
-    <a href="mailto:your.email@gmail.com" class="btn">Email Me</a>
+  <section id="contact" class="container contact-section">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>
+      I'm currently looking for new opportunities. Whether you have a question 
+      or just want to say hi, my inbox is always open!
+    </p>
+    <a href="mailto:your.email@gmail.com" class="btn primary-btn big-btn">Say Hello</a>
   </section>
 
   <footer>
-    <p>© 2025 Sebastian M. • Built with Cultivating Creativity </p>
+    <p>Designed & Built by Sebastian Martinez</p>
   </footer>
 
   <script>
@@ -85,18 +104,22 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
 
     // Dark mode toggle
     const toggle = document.getElementById('theme-switch');
     const body = document.body;
+    
+    // Check for saved theme
+    if(localStorage.getItem('theme') === 'light') {
+        body.classList.add('light-mode');
+    }
 
     toggle.addEventListener('change', () => {
       body.classList.toggle('light-mode');
+      localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
     });
   </script>
 </body>
